@@ -1,0 +1,20 @@
+/* Reveal research controls after students have an understandable first view. */
+.research-navigation{margin-top:18px;border-top:1px solid var(--line);padding-top:15px}
+.research-navigation>summary{display:flex;align-items:center;gap:12px;min-height:44px;padding:10px 12px;color:var(--muted);font-size:13px;cursor:pointer;list-style:none}
+.research-navigation>summary:after{content:'+';margin-left:auto;font-size:18px}
+.research-navigation[open]>summary:after{content:'−'}
+.research-navigation>div{display:grid;gap:6px;margin-top:8px}
+.study-options{margin-bottom:14px}
+.study-options>summary{display:flex;align-items:center;gap:8px;min-height:44px;cursor:pointer;color:var(--ink);font-size:14px;width:fit-content}
+.study-options .workspace-toolbar{margin-top:9px}
+.study-example-caption{font-size:13px;line-height:1.6;color:var(--muted);margin-bottom:4px}
+.source-details{margin-bottom:15px}
+.source-details>summary{font-size:12px;color:var(--muted);cursor:pointer;min-height:34px;align-content:center;width:fit-content}
+.source-details .scope-line{padding-bottom:8px}
+.comparison-disclosure{border-top:1px solid var(--line);padding-top:15px;margin-top:15px}
+.comparison-disclosure>summary{font-size:13px;color:var(--muted);min-height:38px;cursor:pointer}
+.comparison-disclosure .insight-boundary{border:0;margin-top:0;padding-top:8px}
+.rail-collapsed .research-navigation>summary>span{display:none}
+.rail-collapsed .research-navigation>summary{padding-inline:8px}
+@media(max-width:850px) and (min-width:601px){.research-navigation>summary>span{display:none}.research-navigation>summary{padding-inline:8px}}
+@media(max-width:600px){.navigation-rail nav,.rail-collapsed .navigation-rail nav{grid-template-columns:repeat(3,minmax(0,1fr))}.research-navigation{grid-column:1/-1;border-top:0;margin:0;padding:0}.research-navigation>summary{justify-content:center;min-height:36px;padding:5px;font-size:12px;gap:7px}.research-navigation>summary:after{margin-left:3px}.research-navigation>div{grid-template-columns:repeat(3,minmax(0,1fr));margin:4px 0 0}.rail-collapsed .research-navigation>summary>span{display:block}.study-options>summary{font-size:14px;min-height:44px}.study-example-caption{font-size:12px}.source-details{margin-bottom:13px}.map-workspace>.insight-panel>.comparison-disclosure{grid-column:1/-1}.comparison-disclosure>summary{font-size:13px}}

@@ -1,0 +1,34 @@
+async (page) => {
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.goto('http://127.0.0.1:5173/#calendar');
+  const research = page.getByRole('region', { name: 'Historical archive & burned area', exact: true });
+  await research.getByRole('button', { name: 'Export monthly comparison', exact: true }).waitFor();
+  if (await research.locator('tbody tr').count() !== 12) throw new Error('Expected twelve monthly rows.');
+  const jan = research.locator('tbody tr').filter({ has: page.getByRole('rowheader', { name: '2025-01', exact: true }) });
+  if (!(await jan.innerText()).includes('81,945')) throw new Error('Ghana January counts did not match verified source.');
+  await research.getByRole('combobox', { name: 'Research area', exact: true }).selectOption('tamale');
+  if (!(await jan.innerText()).includes('1,660')) throw new Error('Tamale January burned area did not match independent raster check.');
+  await research.getByRole('combobox', { name: 'Research year', exact: true }).selectOption('2024');
+  const july = research.locator('tbody tr').filter({ has: page.getByRole('rowheader', { name: '2024-07', exact: true }) });
+  if (!(await july.innerText()).includes('Unavailable')) throw new Error('Missing raster month was not labelled unavailable.');
+  let pending = page.waitForEvent('download');
+  await research.getByRole('button', { name: 'Export monthly comparison', exact: true }).click();
+  await (await pending).saveAs('output/playwright/history-monthly.csv');
+  pending = page.waitForEvent('download');
+  await research.getByRole('button', { name: 'Export daily history', exact: true }).click();
+  await (await pending).saveAs('output/playwright/history-daily.csv');
+  await research.screenshot({ path: 'output/playwright/history-desktop.png' });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await research.screenshot({ path: 'output/playwright/history-mobile.png' });
+  if (await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1)) throw new Error('Unexpected horizontal page overflow.');
+  await research.getByRole('combobox', { name: 'Research year', exact: true }).selectOption('2025');
+  await research.getByRole('button', { name: 'Load 2025-01 source observations for Tamale study extent', exact: true }).click();
+  await page.getByRole('status').filter({ hasText: 'Full-month requests completed' }).waitFor({ timeout: 60000 });
+  if (await page.getByLabel('From (UTC)', { exact: true }).inputValue() !== '2025-01-01') throw new Error('Month start did not update.');
+  if (await page.getByLabel('To (UTC)', { exact: true }).inputValue() !== '2025-01-31') throw new Error('Month end did not update.');
+  if (await page.getByRole('combobox', { name: 'Study area', exact: true }).inputValue() !== 'Tamale study extent') throw new Error('Study area did not update.');
+  if (errors.length) throw new Error(errors.join('\n'));
+  return { rows: 12, filters: 'Ghana/Tamale and 2024/2025 verified', exports: 'monthly and daily saved', sourceMonth: '2025-01 loaded for Tamale', pageOverflow: false, pageErrors: errors };
+}

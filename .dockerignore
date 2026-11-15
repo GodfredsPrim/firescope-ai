@@ -1,0 +1,9 @@
+.env*
+.git
+node_modules
+dist
+test-results
+.impeccable
+.agents
+.codex
+artifacts/.evaluation-cache

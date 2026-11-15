@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.env*
+!.env.example
+test-results/
+.firebase/
+firebase-debug.log
+*.tsbuildinfo
+*.log
+tmp/
+output/
+.playwright-cli/
+.impeccable/
+.agents/
+.codex/
+.DS_Store
+Thumbs.db
+# Keep only the reproducible saved studies and reviewed evidence in Git.
+artifacts/*
+!artifacts/ghana-seasonal-study/
+!artifacts/nasa-ghana-2025-01-01_03/
+!artifacts/history-verification.json
+!artifacts/history-live-verification.json

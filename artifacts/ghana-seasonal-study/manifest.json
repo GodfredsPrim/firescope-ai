@@ -1,0 +1,239 @@
+{
+  "id": "ghana-seasonal-2021-2025-v1",
+  "title": "Ghana seasonal overlap study",
+  "provider": "NASA FIRMS",
+  "bounds": [
+    -3.3,
+    4.5,
+    1.3,
+    11.2
+  ],
+  "from": "2021-01-01",
+  "to": "2025-07-05",
+  "fetchedAt": "2026-11-12T13:44:18.672Z",
+  "windows": [
+    {
+      "from": "2021-01-01",
+      "to": "2021-01-05",
+      "season": "January sample",
+      "split": "train",
+      "products": [
+        {
+          "product": "MODIS_SP",
+          "file": "2021-01-01-MODIS_SP.csv",
+          "rows": 2207,
+          "fetchedAt": "2026-11-12T13:43:54.481Z",
+          "sha256": "897bb67599c50702bd05d8a6adb7d99a66e45b981bf82e434fe68942e7444f4b"
+        },
+        {
+          "product": "VIIRS_SNPP_SP",
+          "file": "2021-01-01-VIIRS_SNPP_SP.csv",
+          "rows": 10357,
+          "fetchedAt": "2026-11-12T13:43:56.408Z",
+          "sha256": "8f4c3de47a15d36722d57675e5edb0eec7e52fb0f3d2396990806bdf1a0e8fce"
+        }
+      ]
+    },
+    {
+      "from": "2021-07-01",
+      "to": "2021-07-05",
+      "season": "July sample",
+      "split": "train",
+      "products": [
+        {
+          "product": "MODIS_SP",
+          "file": "2021-07-01-MODIS_SP.csv",
+          "rows": 2,
+          "fetchedAt": "2026-11-12T13:43:56.747Z",
+          "sha256": "1814b4c41abbd09ad625230dbe74f44b35aa746c39bb76fda9759950702991e7"
+        },
+        {
+          "product": "VIIRS_SNPP_SP",
+          "file": "2021-07-01-VIIRS_SNPP_SP.csv",
+          "rows": 13,
+          "fetchedAt": "2026-11-12T13:43:57.210Z",
+          "sha256": "3cf7ea80951c442cd92e7f9178e62a2ff758e3577e35059035e60e121bbfa46c"
+        }
+      ]
+    },
+    {
+      "from": "2022-01-01",
+      "to": "2022-01-05",
+      "season": "January sample",
+      "split": "train",
+      "products": [
+        {
+          "product": "MODIS_SP",
+          "file": "2022-01-01-MODIS_SP.csv",
+          "rows": 1444,
+          "fetchedAt": "2026-11-12T13:43:57.750Z",
+          "sha256": "d20bd43a1a788136db0a07f8392419aa6957fc001bac0a5de4a6e18c577b3d32"
+        },
+        {
+          "product": "VIIRS_SNPP_SP",
+          "file": "2022-01-01-VIIRS_SNPP_SP.csv",
+          "rows": 7871,
+          "fetchedAt": "2026-11-12T13:43:59.148Z",
+          "sha256": "cfc99c3893586cb8b1215e3488973952b11d267ed6d2df23e36240b52dc36408"
+        }
+      ]
+    },
+    {
+      "from": "2022-07-01",
+      "to": "2022-07-05",
+      "season": "July sample",
+      "split": "train",
+      "products": [
+        {
+          "product": "MODIS_SP",
+          "file": "2022-07-01-MODIS_SP.csv",
+          "rows": 3,
+          "fetchedAt": "2026-11-12T13:43:59.435Z",
+          "sha256": "2545aee13ace0224138b36e25cc4ca47a6a65ca9f72cfcffb5eddc61fd69a157"
+        },
+        {
+          "product": "VIIRS_SNPP_SP",
+          "file": "2022-07-01-VIIRS_SNPP_SP.csv",
+          "rows": 38,
+          "fetchedAt": "2026-11-12T13:43:59.822Z",
+          "sha256": "d9f465370b46504a030398a9c90cdf86c433ce667a65db6256547be50fc9689d"
+        }
+      ]
+    },
+    {
+      "from": "2023-01-01",
+      "to": "2023-01-05",
+      "season": "January sample",
+      "split": "train",
+      "products": [
+        {
+          "product": "MODIS_SP",
+          "file": "2023-01-01-MODIS_SP.csv",
+          "rows": 3846,
+          "fetchedAt": "2026-11-12T13:44:00.611Z",
+          "sha256": "6aafc619363a7ff1d5376af3fae14f6f7958e2e32bf199ec5a05ada6774851a1"
+        },
+        {
+          "product": "VIIRS_SNPP_SP",
+          "file": "2023-01-01-VIIRS_SNPP_SP.csv",
+          "rows": 18075,
+          "fetchedAt": "2026-11-12T13:44:03.111Z",
+          "sha256": "53febc34ffa9ee125209c1254ddc1a0caeca6dac7ce997e50ec67cbf65b9079b"
+        }
+      ]
+    },
+    {
+      "from": "2023-07-01",
+      "to": "2023-07-05",
+      "season": "July sample",
+      "split": "train",
+      "products": [
+        {
+          "product": "MODIS_SP",
+          "file": "2023-07-01-MODIS_SP.csv",
+          "rows": 3,
+          "fetchedAt": "2026-11-12T13:44:03.469Z",
+          "sha256": "20583ee262011e184370789940c7a4af05c8a5f81264f9ec1f5a0da8f11cc2c2"
+        },
+        {
+          "product": "VIIRS_SNPP_SP",
+          "file": "2023-07-01-VIIRS_SNPP_SP.csv",
+          "rows": 27,
+          "fetchedAt": "2026-11-12T13:44:03.947Z",
+          "sha256": "29d8f41826c1451b30ae1dc3b7a3e2674b460e4ca64cb23a2046c51f702c85b1"
+        }
+      ]
+    },
+    {
+      "from": "2024-01-01",
+      "to": "2024-01-05",
+      "season": "January sample",
+      "split": "validation",
+      "products": [
+        {
+          "product": "MODIS_SP",
+          "file": "2024-01-01-MODIS_SP.csv",
+          "rows": 2490,
+          "fetchedAt": "2026-11-12T13:44:04.682Z",
+          "sha256": "98d99fa4359c50c9b71bb8501980e496613334bf011a98bec72b297430181fff"
+        },
+        {
+          "product": "VIIRS_SNPP_SP",
+          "file": "2024-01-01-VIIRS_SNPP_SP.csv",
+          "rows": 12328,
+          "fetchedAt": "2026-11-12T13:44:06.638Z",
+          "sha256": "d7838e25d5f74f2cf76654f5aa763b1fd3a28c31aac1cd3301fc242abb2d602d"
+        }
+      ]
+    },
+    {
+      "from": "2024-07-01",
+      "to": "2024-07-05",
+      "season": "July sample",
+      "split": "validation",
+      "products": [
+        {
+          "product": "MODIS_SP",
+          "file": "2024-07-01-MODIS_SP.csv",
+          "rows": 6,
+          "fetchedAt": "2026-11-12T13:44:11.952Z",
+          "sha256": "09c6b9629e003a7a5d8d401e8e75d52b6c3eaa0c4f9693dccabf9a561abdf75d"
+        },
+        {
+          "product": "VIIRS_SNPP_SP",
+          "file": "2024-07-01-VIIRS_SNPP_SP.csv",
+          "rows": 39,
+          "fetchedAt": "2026-11-12T13:44:12.273Z",
+          "sha256": "4871e7f0cecea78cb64abec2ca3f9506181487a6ab1cc909e1d195bdf7696f05"
+        }
+      ]
+    },
+    {
+      "from": "2025-01-01",
+      "to": "2025-01-05",
+      "season": "January sample",
+      "split": "test",
+      "products": [
+        {
+          "product": "MODIS_SP",
+          "file": "2025-01-01-MODIS_SP.csv",
+          "rows": 3058,
+          "fetchedAt": "2026-11-12T13:44:13.789Z",
+          "sha256": "1e91f16df42ab1e84b6fc2c7d4dbeb10ae796ca65195fbe54cba9af5167d6a15"
+        },
+        {
+          "product": "VIIRS_SNPP_SP",
+          "file": "2025-01-01-VIIRS_SNPP_SP.csv",
+          "rows": 13997,
+          "fetchedAt": "2026-11-12T13:44:17.974Z",
+          "sha256": "a7f1ee052a01d92951c4408d8fe62d2ea402daf575bd63adac06c2ca2651cef8"
+        }
+      ]
+    },
+    {
+      "from": "2025-07-01",
+      "to": "2025-07-05",
+      "season": "July sample",
+      "split": "test",
+      "products": [
+        {
+          "product": "MODIS_SP",
+          "file": "2025-07-01-MODIS_SP.csv",
+          "rows": 4,
+          "fetchedAt": "2026-11-12T13:44:18.273Z",
+          "sha256": "b29beecfa79e6e8cc5a2a47346094086354e62b420dc29e5789b6fb7770c632e"
+        },
+        {
+          "product": "VIIRS_SNPP_SP",
+          "file": "2025-07-01-VIIRS_SNPP_SP.csv",
+          "rows": 15,
+          "fetchedAt": "2026-11-12T13:44:18.661Z",
+          "sha256": "70963944a752c696d358cb88332cbccfd6f25c048107f510d7777969af74663b"
+        }
+      ]
+    }
+  ],
+  "design": "Five requested days in January and July in each of 2021–2025; fixed year holdouts. This is a seasonal sample, not continuous annual coverage.",
+  "coverage": "Both product requests completed for each listed window. Cloud-free observing opportunity is unknown; zero returned detections does not establish no burning.",
+  "reference": "MODIS Aqua only; VIIRS Suomi-NPP. No independent fire truth."
+}

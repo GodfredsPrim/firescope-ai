@@ -1,0 +1,28 @@
+{
+  "verifiedAt": "2026-11-15T07:07:11.942Z",
+  "base": "https://firescope-flareforge.web.app",
+  "bundle": "/assets/index-OGZtMuZo.js",
+  "verified": [
+    {
+      "url": "https://firescope-flareforge.web.app/index.html",
+      "sha256": "1fd34f9506299079aa170e42f99e5da65cd0f9956fd057c6cebff6d6121bbae9",
+      "bytes": 1261
+    },
+    {
+      "url": "https://firescope-flareforge.web.app/data/history/manifest.json",
+      "sha256": "a4a3e60aa8da8151d4ad2117813b176a15cb5ee430ecc6937c1868c1cbec3a3b",
+      "bytes": 206606
+    },
+    {
+      "url": "https://firescope-flareforge.web.app/data/burned-area/manifest.json",
+      "sha256": "bdd7c8a262f24e937a261e2b5c4e1cac70e2b591c5c1da2f2ee07f3ecdc41364",
+      "bytes": 61922
+    },
+    {
+      "url": "https://firescope-flareforge.web.app/data/history/2025-06.json",
+      "sha256": "9878e5c11736349f3160181b66f666f5ad88a4f9e213abc58c8b4f8a24800181",
+      "bytes": 22117
+    }
+  ],
+  "result": "Published app bundle and research files match the verified production build."
+}

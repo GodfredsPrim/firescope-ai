@@ -1,0 +1,158 @@
+/* Scientific workspace refinement: observation-first, restrained fire orange,
+   self-hosted Source Sans 3, consistent controls and source-led analysis. */
+:root { font-family: 'Source Sans 3 Variable', 'Helvetica Neue', sans-serif; --ink: #24313b; --muted: #52616c; --line: #dfe5e8; --accent: #f05a24; background: #f4f6f7; color: var(--ink); }
+.app-shell { min-height: 100dvh; }
+.sidebar { padding: 30px 16px 22px; }
+.brand { font-size: 24px; letter-spacing: -0.7px; }
+.brand-mark { color: #222d34; border-radius: 10px; width: 37px; height: 40px; }
+.workspace-name { font-size: 12px; margin-top: 44px; }
+.nav-item { border-radius: 8px; font-size: 14px; gap: 12px; min-height: 48px; }
+.nav-item.active { background: #fff0e8; color: #963600; }
+.nav-dot { display: none; }
+.topbar { height: 64px; font-size: 13px; }
+.page { max-width: 1560px; padding-top: 32px; }
+h1 { font-size: clamp(28px, 2.6vw, 38px); font-weight: 650; letter-spacing: -0.8px; line-height: 1.13; }
+.page-heading { margin-bottom: 24px; }
+.page-heading p { font-size: 15px; max-width: 65ch; }
+.primary, .secondary { min-height: 42px; padding: 10px 16px; border-radius: 8px; font-size: 14px; font-weight: 600; transition: background-color 160ms, transform 160ms; }
+.primary { color: #20272c; }
+.primary:active:not(:disabled), .secondary:active:not(:disabled) { transform: translateY(1px); }
+.primary:hover:not(:disabled) { background: #e9501b; filter: none; }
+.secondary:hover:not(:disabled) { background: #f1f4f5; filter: none; }
+.data-status { padding: 12px 16px; border-radius: 8px; font-size: 13px; }
+.data-status button { font-size: 13px; }
+.feedback { font-size: 14px; border-radius: 8px; }
+.filters { gap: 16px; padding: 0 0 24px; align-items: end; }
+.filter-title { font-size: 14px; padding-bottom: 12px; }
+.filters label, .link-controls label, .calendar-toolbar label, .request-fields label, .request-bounds label { font-size: 13px; font-weight: 600; color: var(--muted); display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+.filters select, .filters input, .link-controls select, .calendar-toolbar select, .request-fields input, .request-fields select, .request-bounds input { border: 1px solid #c8d1d7; color: var(--ink); background: #fff; border-radius: 7px; padding: 9px 11px; font: inherit; font-size: 14px; min-height: 42px; width: 100%; min-width: 0; }
+.filters input { max-width: 180px; }
+.explorer-grid { grid-template-columns: minmax(0, 1fr) 280px; gap: 20px; }
+.map-panel, .summary, .calendar-panel, .table-panel, .comparison-panel, .reading-panel, .news-panel, .data-request, .link-analysis { border-radius: 12px; background: #fff; border: 1px solid var(--line); }
+.panel-heading { padding: 22px 24px; }
+.panel-heading h2, .summary h2 { font-size: 17px; font-weight: 650; }
+.panel-heading p { font-size: 13px; }
+.legend { font-size: 12px; }
+.map { height: 440px; }
+.map-footer { font-size: 12px; padding: 13px 20px; }
+.map-note { font-size: 11px; border-radius: 4px; }
+.summary { padding: 24px; }
+.tag { font-size: 12px; border-radius: 5px; padding: 5px 9px; }
+.observation-total { font-size: 56px; letter-spacing: -1.5px; font-weight: 600; }
+.observation-total span { font-size: 14px; }
+.plain-note, .sensor-row, .text-action { font-size: 13px; }
+.coverage-note strong, .coverage-note p, .cell-summary span { font-size: 12px; }
+.calendar-toolbar { display: flex; justify-content: space-between; align-items: end; flex-wrap: wrap; gap: 15px; padding: 0 24px 22px; }
+.calendar-toolbar label { max-width: 300px; }
+.calendar-content { gap: 28px; padding: 0 24px 22px; }
+.month-button { font-size: 12px; border-radius: 7px; background: #f3f5f6; min-height: 110px; }
+.month-bar { border-radius: 3px 3px 0 0; }
+.days button { font-size: 12px; min-height: 42px; border-radius: 6px; }
+.days small, .weekdays { font-size: 11px; }
+.calendar-footer { font-size: 12px; line-height: 1.5; }
+table { font-size: 13px; }
+th, .table-date { font-size: 12px; }
+.table-date small { font-size: 11px; }
+.sensor-tag { font-size: 11px; }
+.data-request { margin-bottom: 22px; overflow: hidden; }
+.request-intro { padding: 22px 24px 18px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+.request-intro h2 { font-size: 19px; letter-spacing: -0.25px; font-weight: 650; margin: 0 0 6px; }
+.request-intro p { font-size: 14px; max-width: 65ch; }
+.data-request details { border-top: 1px solid var(--line); }
+.data-request summary { padding: 14px 24px; display: flex; align-items: center; gap: 10px; cursor: pointer; font-weight: 600; font-size: 14px; color: #963600; list-style: none; }
+.data-request summary::-webkit-details-marker { display: none; }
+.data-request details[open] summary svg { transform: rotate(180deg); }
+.data-request form { padding: 8px 24px 22px; }
+.request-fields { display: grid; grid-template-columns: 1fr 1fr 1.5fr; gap: 16px; margin-bottom: 16px; }
+.request-bounds { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 12px; }
+.data-request form > p { font-size: 13px; max-width: 90ch; margin-bottom: 16px; }
+.request-alternatives { display: flex; flex-wrap: wrap; gap: 18px 40px; padding: 14px 24px; border-top: 1px solid var(--line); background: #f9fafb; }
+.request-alternatives button { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 14px; padding: 0; text-align: left; font-weight: 600; }
+.request-alternatives span { font-size: 12px; color: var(--muted); font-weight: 400; }
+.request-replace { padding: 0 24px 14px; background: #f9fafb; font-size: 12px; }
+.data-request.has-data .request-alternatives, .data-request.has-data .request-replace { display: none; }
+.data-request.has-data .request-intro { padding-top: 16px; padding-bottom: 16px; }
+.data-request.has-data .request-intro p { display: none; }
+.data-request.has-data .request-intro h2 { font-size: 17px; margin-bottom: 0; }
+.link-analysis { margin-bottom: 24px; }
+.link-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 20px; padding: 0 24px 24px; }
+.link-controls label { min-width: 170px; }
+.link-controls p { flex: 1; min-width: 200px; font-size: 13px; max-width: 62ch; }
+.link-metrics { margin: 0 24px; padding: 24px 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.link-metrics dt { font-size: 13px; color: var(--muted); }
+.link-metrics dd { margin: 8px 0 0; font-size: 34px; line-height: 1; font-weight: 600; font-variant-numeric: tabular-nums; }
+.analysis-explanation { padding: 18px 24px 24px; }
+.analysis-explanation p { max-width: 90ch; font-size: 14px; }
+.analysis-explanation p + p { margin-top: 8px; }
+.activity-ranking { padding: 0 24px 24px; }
+.activity-ranking h3 { font-size: 17px; margin: 0 0 6px; font-weight: 600; }
+.activity-ranking p { font-size: 13px; }
+.activity-ranking ol { margin: 16px 0 0; padding: 0; list-style: none; }
+.activity-ranking li + li { border-top: 1px solid var(--line); }
+.activity-ranking button { display: flex; width: 100%; gap: 16px; align-items: center; padding: 12px 0; font-size: 14px; text-align: left; }
+.activity-ranking button:hover { color: #963600; }
+.activity-ranking button span { margin-left: auto; color: var(--muted); }
+.analysis-downloads { padding: 18px 24px; display: flex; flex-wrap: wrap; gap: 12px; border-top: 1px solid var(--line); }
+.reading-panel { padding: 32px; }
+.reading-panel h2 { font-weight: 600; }
+.reading-panel a { font-size: 14px; }
+.news-list a { font-size: 18px; }
+.news-status, .news-meta, .news-note, .news-empty, .news-search p { font-size: 13px; }
+.news-search label { font-size: 14px; }
+.news-search input { border-radius: 8px; font-size: 15px; }
+.page-footer { font-size: 12px; }
+@media (max-width: 1200px) {
+  .explorer-grid { grid-template-columns: minmax(0, 1fr) 245px; }
+  .summary { padding: 20px; }
+  .request-intro { align-items: flex-start; flex-wrap: wrap; }
+}
+@media (max-width: 850px) {
+  .sidebar { padding-left: 8px; padding-right: 8px; }
+  .nav-item { font-size: 0; }
+  .explorer-grid { grid-template-columns: minmax(0, 1fr); }
+  .observation-total { font-size: 44px; }
+  .link-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .request-fields { grid-template-columns: 1fr 1fr; }
+  .request-fields label:last-child { grid-column: 1 / -1; }
+  .request-bounds { grid-template-columns: 1fr 1fr; }
+  .request-intro { padding: 20px 18px; }
+  .data-request form { padding: 8px 18px 20px; }
+  .data-request summary, .request-alternatives { padding-left: 18px; padding-right: 18px; }
+  .request-alternatives button { flex-basis: 100%; }
+  .request-replace { padding-left: 18px; padding-right: 18px; }
+}
+@media (max-width: 520px) {
+  .sidebar { padding: 14px 16px; }
+  .brand > span:last-child { font-size: 20px; }
+  .brand-mark { width: 30px; height: 32px; }
+  .nav-item { min-height: 35px; gap: 0; }
+  .nav-item svg { flex-shrink: 0; width: 17px; height: 19px; }
+  .page { padding-top: 22px; }
+  .topbar { height: 49px; font-size: 11px; }
+  h1 { font-size: 31px; max-width: none; }
+  .page-heading p { font-size: 14px; }
+  .page-heading > .primary { display: none; }
+  .map { height: 360px; }
+  .panel-heading { padding: 20px 16px; }
+  .legend { font-size: 11px; }
+  .map-footer { font-size: 11px; }
+  .calendar-toolbar { padding: 0 16px 20px; align-items: stretch; }
+  .calendar-toolbar label { max-width: none; width: 100%; }
+  .calendar-content { padding-left: 12px; padding-right: 12px; }
+  .calendar-footer { font-size: 11px; }
+  .link-controls, .analysis-explanation, .activity-ranking { padding-left: 16px; padding-right: 16px; }
+  .link-controls label { min-width: 0; flex: 1 1 130px; }
+  .link-metrics { margin-left: 16px; margin-right: 16px; gap: 22px 14px; }
+  .link-metrics dt { font-size: 12px; }
+  .link-metrics dd { font-size: 30px; }
+  .analysis-downloads { padding-left: 16px; padding-right: 16px; }
+  .activity-ranking button { font-size: 13px; gap: 10px; }
+}
+@media (max-width: 380px) {
+  .sidebar { flex-wrap: wrap; gap: 12px; }
+  .sidebar nav { width: 100%; justify-content: space-between; }
+  .nav-item { width: 44px; min-height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) { .primary, .secondary { transition: none; } }

@@ -1,0 +1,23 @@
+{
+  "verifiedAt": "2026-11-15T07:00:42.471Z",
+  "requestedDays": 731,
+  "observationRecords": 549208,
+  "sourceCSVs": 316,
+  "rasterFiles": 144,
+  "availableBurnMonths": 18,
+  "unavailableBurnMonths": [
+    "2024-07",
+    "2025-05",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10"
+  ],
+  "independentRasterCheck": {
+    "month": "2025-01",
+    "area": "Tamale rectangle",
+    "burnedCells": 7733,
+    "burnedKm2": 1659.9555206033544
+  },
+  "interpretation": "Checks establish software/data consistency, not independent scientific validation."
+}

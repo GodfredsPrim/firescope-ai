@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "headers": [
+      { "source": "**", "headers": [{ "key": "X-Content-Type-Options", "value": "nosniff" }, { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }] },
+      { "source": "/assets/**", "headers": [{ "key": "Cache-Control", "value": "public,max-age=31536000,immutable" }] },
+      { "source": "/data/**", "headers": [{ "key": "Cache-Control", "value": "public,max-age=3600" }] }
+    ],
+    "rewrites": [
+      { "source": "/api/demo/historical", "destination": "/data/historical.json" },
+      { "source": "/api/demo/seasonal-study", "destination": "/data/seasonal-study.json" },
+      { "source": "/api/**", "destination": "/data/unavailable.json" },
+      { "source": "**", "destination": "/index.html" }
+    ]
+  }
+}

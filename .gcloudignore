@@ -1,0 +1,16 @@
+.gcloudignore
+.git
+.env*
+node_modules
+dist
+test-results
+tmp
+output
+.impeccable
+.agents
+.codex
+artifacts/*
+!artifacts/nasa-ghana-2025-01-01_03/
+!artifacts/ghana-seasonal-study/
+!artifacts/nasa-ghana-2025-01-01_03/**
+!artifacts/ghana-seasonal-study/**
